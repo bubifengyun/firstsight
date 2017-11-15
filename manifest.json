@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+
+    "name": "First Sight",
+    "description": "A chrome extension for pickup your words.", 
+    "version": "0.0.0",
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "contextMenus",
+        "activeTab",
+        "storage"
+    ]
+}
