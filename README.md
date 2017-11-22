@@ -1,7 +1,5 @@
 # TODO
-1. backend
+1. popup modal for text showing and word selection
 2. extension: send selected text to backend
 3. extension: show word cards
-4. icon
 1. extension: login
-
