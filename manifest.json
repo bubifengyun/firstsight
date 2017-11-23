@@ -12,7 +12,8 @@
     "background": {
         "scripts": [
             "popup.js"
-        ]
+        ],
+        "html": ["modal.html"]
     },
     "permissions": [
         "contextMenus",
@@ -24,10 +25,13 @@
         "16": "death_note_16x16.png"
     },
     "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js":["contentscript.js"],
-      "run_at": "document_start"
-    }
-  ]
+        {
+            "matches": ["<all_urls>"],
+            "js":["contentscript.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "modal.html"
+    ]
 }
