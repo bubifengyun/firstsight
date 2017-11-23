@@ -131,6 +131,17 @@ function rightClickMenuOnClick(info, tab) {
     text = info.selectionText
     console.log("selected text: " + JSON.stringify(text));
     // console.log("tab: " + JSON.stringify(tab));
+    // chrome.runtime.getBackgroundPage(function(bgWindow) {
+    //     // bgWindow.setPassword(password);
+    //     // window.close();     // Close dialog
+    //     console.log("----test");
+
+    //     // chrome.windows.create(null, () => {})
+    // });
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        console.log(tabs);
+        chrome.tabs.sendMessage(tabs[0].id, {type: "openModal"});
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {

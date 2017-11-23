@@ -3,7 +3,7 @@
 
     "name": "First Sight",
     "description": "A chrome extension for pickup your words.", 
-    "version": "0.0.0",
+    "version": "0.0.1",
 
     "browser_action": {
         "default_icon": "death_note_16x16.png",
@@ -12,9 +12,17 @@
     "permissions": [
         "contextMenus",
         "activeTab",
+        "tabs",
         "storage"
     ],
     "icons": {
         "16": "death_note_16x16.png"
+    },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js":["contentscript.js"],
+      "run_at": "document_start"
     }
+  ]
 }
