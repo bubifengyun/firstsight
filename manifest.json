@@ -9,6 +9,11 @@
         "default_icon": "death_note_16x16.png",
         "default_popup": "popup.html"
     },
+    "background": {
+        "scripts": [
+            "popup.js"
+        ]
+    },
     "permissions": [
         "contextMenus",
         "activeTab",
