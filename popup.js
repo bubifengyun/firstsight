@@ -9,7 +9,7 @@ function rightClickMenuOnClick(info, tab) {
     console.log("selected text: " + JSON.stringify(text));
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
         console.log(tabs);
-        chrome.tabs.sendMessage(tabs[0].id, {type: "openModal"});
+        chrome.tabs.sendMessage(tabs[0].id, {type: "openModal", text: text});
     });
 }
 
