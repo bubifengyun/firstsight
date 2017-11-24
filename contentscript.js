@@ -8,6 +8,10 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
                 $($.parseHTML(data)).appendTo('body');
 
 				// Get the modal
+                $('#myModal .modal-content').remove('p');
+                $('#myModal .modal-content').append('<p>'+request.text+'</p>');
+                // $('#myModal .modal-content p').innerHTML = request.text;
+
 				$('#myModal')[0].style.display = "block";
 
 				// When the user clicks on <span> (x), close the modal
@@ -15,8 +19,6 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse){
                     $('#myModal')[0].style.display = "none";
 					// modal.style.display = "none";
 				}
-
-                $('#myModal .modal-content p').innerHTML = request.text;
 
 				// When the user clicks anywhere outside of the modal, close it
 				// window.onclick = function(event) {
